@@ -16,11 +16,13 @@ var userSurname = prompt('inserisci il tuo cognome');
 
 surnameList.push(userSurname);
 
+
 console.table(surnameList.sort());
 
-var display = userSurname + ' ' + parseInt(surnameList.indexOf(userSurname)) + parseInt(2);
+var display = userSurname + ' ' + (surnameList.indexOf(userSurname) + 1);
 
-
-list.innerHTML = surnameList;
+surnameList.splice(surnameList.indexOf(userSurname), 1, display);
 
 console.log(display);
+
+list.innerHTML = (surnameList);
