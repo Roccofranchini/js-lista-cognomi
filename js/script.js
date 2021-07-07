@@ -35,4 +35,11 @@ console.log(display);
 
 //stampiamo tutto
 
-list.innerHTML = (surnameList);
+var listElement = '';
+
+for (var i = 0; i < surnameList.length; i++) {
+
+    listElement += '<li>' + surnameList[i] + '</li>';
+}
+
+list.innerHTML = (listElement);
